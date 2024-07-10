@@ -30,9 +30,6 @@ for _ in range(M):
 
 for b in bucket:
     print(b, end=' ')
-
-
-
 # # print(bucket)
 # li = [0,1,2,3,4,5]
 # li2 = []
