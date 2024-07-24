@@ -5,9 +5,9 @@ for _ in range(N):
     sum = 0
     score = 0
     for i in range(len(OX)):
-        if OX[i] == 'O':
-            score += 1
-            sum += score
-        else:
+        if OX[i] == 'X':
             score = 0
+            continue
+        score += 1
+        sum += score
     print(sum)
