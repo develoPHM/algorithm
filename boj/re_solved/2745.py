@@ -7,3 +7,4 @@ for i in range(len(N)):
     else:
         num += (ord(N[i]) - 55) * (int(B) ** i)
 print(num)
+
