@@ -1,11 +1,17 @@
-a = 2
-b = 1
-n = 20
-plus = 0
-cnt = 0
-while n >= a:
-    plus = n % a
-    n = (n // a) * b
-    cnt += n
-    n = n + plus
-print(cnt)
+N = int(input())
+paper = []
+white = 0
+blue = 0
+for _ in range(N):
+    paper.append(list(map(int, input().split())))
+
+
+def one(a, n):
+    a = [0,0]
+    one_paper = []
+    for i in range(a[0],n):
+        li = []
+        for j in range(a[1],n):
+            li.append(paper[i][j])
+        one_paper.append(li)
+    return one_paper
