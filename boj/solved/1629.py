@@ -1,15 +1,14 @@
-import sys
-sys.setrecursionlimit(10**6)
+A, B, C = map(int,input().split())
+bin_num = ''
+ans = 1
+while B > 0:
+    binary = str(B % 2)
+    bin_num += binary
+    B = B // 2
 
-def cal(A, B, C):
-    if B == 0:
-        return 1
-    half = cal(A, B // 2, C)
-    half = (half * half) % C
-    if B % 2 == 1:
-        half = (half * A) % C
-    return half
-
-A, B, C = map(int, input().split())
-result = cal(A, B, C)
-print(result)
+for i in range(len(bin_num)):
+    if int(bin_num[i]) == 0:
+        continue
+    else:
+        ans *= A ** (2 ** i)
+print(ans % C)
