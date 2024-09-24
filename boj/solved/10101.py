@@ -1,18 +1,18 @@
 a = []
 for _ in range(3):
     a.append(int(input()))
-cnt = 0
+count = 0
 total = 0
 total += a[0]
 for i in range(1, 3): # 1 ~ 2
     total += a[i]
     if a[i] == a[i - 1]:
-        cnt += 1
-if total == 180 and cnt == 2:
+        count += 1
+if total == 180 and count == 2:
     print('Equilateral')
-elif total == 180 and cnt == 1:
+elif total == 180 and count == 1:
     print('Isosceles')
-elif total == 180 and cnt == 0:
+elif total == 180 and count == 0:
     print('Scalene')
 else:
     print('Error')

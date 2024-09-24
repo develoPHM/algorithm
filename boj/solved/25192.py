@@ -6,7 +6,7 @@ for _ in range(N):
 li = ','.join(li).split('ENTER')
 people = []
 dic = {}
-cnt = 0
+count = 0
 
 for i in range(1, len(li)):
     people.append(li[i][1:].split(','))
@@ -20,5 +20,5 @@ for i in range(len(people)):
             continue
 
         dic[people[i][j]] = 1
-        cnt += 1
-print(cnt)
+        count += 1
+print(count)

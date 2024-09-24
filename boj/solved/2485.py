@@ -5,7 +5,7 @@ input = sys.stdin.readline
 
 N = int(input())
 li = []
-cnt = 0
+count = 0
 for i in range(N):
     li.append(int(input()))
 

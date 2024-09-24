@@ -9,14 +9,16 @@ for i in range(M):
     graph[a].append(b)
     graph[b].append(a)
 
+for c in graph:
+    c.sort()
+
 def dfs(start):
-    stack = [start]
-    while stack:
-        v = stack.pop()
-        print(v, end=' ')
-        for node in graph[v]:
-            if not visited_dfs[node]:
-                dfs(node)
+    visited_dfs[start] = 1
+    print(start, end=' ')
+    for c in graph[start]:
+        if visited_dfs[c] == 0:
+            dfs(c)
+
 
 def bfs(start):
     q = deque([start])

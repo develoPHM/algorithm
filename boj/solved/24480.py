@@ -3,7 +3,7 @@ input = sys.stdin.readline
 sys.setrecursionlimit(10**6)
 
 def dfs(r):
-    global cnt
+    global count
     visited[r] = cnt
     li[r].sort(reverse=True)
     for i in li[r]:
@@ -15,7 +15,7 @@ def dfs(r):
 N, M, R = map(int, input().split())
 li = [[] for _ in range(N + 1)]
 visited = [0] * (N + 1)  # 저장값
-cnt = 1
+count = 1
 for _ in range(M):
     a, b = map(int, input().split())
     li[a].append(b)  # 양 방향 간선

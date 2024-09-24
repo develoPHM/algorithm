@@ -21,7 +21,7 @@ for i in range(3, MAX_PRIME):
 
 while True:
     n = int(input())
-    cnt = 0
+    count = 0
     if n == 0:
         exit(0)
     print(sum[2 * n] - sum[n])

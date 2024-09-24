@@ -1,18 +1,18 @@
 s = input()
 s = s.upper()
-cnt = [0] * 26
+count = [0] * 26
 for c in s:
     cur_idx = ord(c) - ord('A')
-    cnt[cur_idx] += 1
+    count[cur_idx] += 1
 
 max_idx = 0
-for i in range(len(cnt)):
-    if cnt[i] > cnt[max_idx]:
+for i in range(len(count)):
+    if count[i] > count[max_idx]:
         max_idx = i
 
 max_cnt = 0
-for i in range(len(cnt)):
-    if cnt[max_idx] == cnt[i]:
+for i in range(len(count)):
+    if count[max_idx] == count[i]:
         max_cnt += 1
 
 if max_cnt > 1:

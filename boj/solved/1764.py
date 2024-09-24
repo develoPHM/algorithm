@@ -2,7 +2,7 @@ N, M = map(int,input().split())
 li = []
 d = {}
 ans = []
-cnt = 0
+count = 0
 for _ in range(N):
     li.append(input())
 for _ in range(M):
@@ -10,7 +10,7 @@ for _ in range(M):
 for c in li:
     if c in d:
         ans.append(c)
-        cnt += 1
-print(cnt)
+        count += 1
+print(count)
 for c in sorted(ans):
     print(c)

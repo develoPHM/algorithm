@@ -7,10 +7,10 @@ for c in range(len(S)):
     elif c == '0':
         second += 11
     else:
-        cnt = 3
+        count = 3
         for d in range(len(num)):
             if S[c] in num[d]:
-                second += cnt
-            cnt += 1
+                second += count
+            count += 1
 
 print(second)

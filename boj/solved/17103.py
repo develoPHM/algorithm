@@ -14,9 +14,9 @@ for i in range(2, int(MAX_PRIME ** 0.5) + 1):
 T = int(input())
 for _ in range(T):
     N = int(input())
-    cnt = 0
+    count = 0
     for i in range(2, N // 2 + 1):
         if prime[i] and prime[N - i]:
-            cnt += 1
+            count += 1
             # print(i, N - i)
-    print(cnt)
+    print(count)

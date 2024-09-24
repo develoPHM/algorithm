@@ -3,7 +3,7 @@ A_dict = {}
 B_dict = {}
 A_list = list(map(int,input().split()))
 B_list = list(map(int,input().split()))
-cnt = 0
+count = 0
 for c in A_list:
     A_dict[c] = 1
 for c in B_list:
@@ -12,10 +12,10 @@ for c in B_list:
 for c in A_dict:
     if c in B_dict:
         continue
-    cnt += 1
+    count += 1
 # B-A
 for c in B_dict:
     if c in A_dict:
         continue
-    cnt += 1
-print(cnt)
+    count += 1
+print(count)

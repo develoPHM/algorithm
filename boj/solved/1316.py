@@ -1,5 +1,5 @@
 N = int(input())
-cnt = 0
+count = 0
 
 for _ in range(N):
     word = input()
@@ -8,9 +8,9 @@ for _ in range(N):
     for i in range(1, len(word)):
         cur_idx = ord(word[i]) - ord('a')
         if word[i] != word[i - 1] and alpha[cur_idx]:
-            cnt -= 1
+            count -= 1
             break
         alpha[cur_idx] = True
-    cnt += 1
+    count += 1
 
-print(cnt)
+print(count)

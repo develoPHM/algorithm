@@ -3,7 +3,7 @@ import sys
 input = sys.stdin.readline
 
 N, M, R = map(int,input().split())
-cnt = 1
+count = 1
 graph = [[] for _ in range(N + 1)]
 visited = [0] * (N + 1)
 for _ in range(M):
@@ -12,7 +12,7 @@ for _ in range(M):
     graph[b].append(a)
 
 def bfs(r):
-    global cnt
+    global count
     q = deque([r])
     visited[r] = 1
 
