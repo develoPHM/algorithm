@@ -1,10 +1,13 @@
 from collections import deque
 
-x, y = map(int, input().split())
-graph = [list(map(int, input().split())) for _ in range(y)]
+x, y, z = map(int, input().split())
+graph = [[] for _ in range(z)]
+for i in range(z):
+    for j in range(y):
+        graph[i].append(list(map(int,input().split())))
 dx = [0, 0, -1, 1]
 dy = [1, -1, 0, 0]
-
+dz = [1, -1]
 
 def bfs():
     q = deque()
@@ -24,15 +27,3 @@ def bfs():
                 continue
             graph[ny][nx] = graph[b][a] + 1
             q.append([nx, ny])
-
-
-bfs()
-ans = 0
-for row in graph:
-    for c in row:
-        if c == 0:
-            print(-1)
-            exit(0)
-        else:
-            ans = max(ans, c)
-print(ans - 1)
