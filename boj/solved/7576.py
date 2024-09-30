@@ -36,3 +36,5 @@ for row in graph:
         else:
             ans = max(ans, c)
 print(ans - 1)
+for c in graph:
+    print(c)
