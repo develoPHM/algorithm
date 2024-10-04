@@ -1,11 +1,11 @@
 H, M = map(int,input().split())
-T = int(input())
+P = int(input())
 
-if M + T >= 60:
-    H += (M + T) // 60
-    M = (M + T) % 60
+if M + P >= 60:
+    H += (M + P) // 60
+    M = (M + P) % 60
 else:
-    M = M + T
+    M = M + P
 
 if H >= 24:
     H %= 24
