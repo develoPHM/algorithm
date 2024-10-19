@@ -1,2 +1,7 @@
-a = [1,2,34]
-print(a[::-1])
+a = False
+
+if not a: # a가 False면
+    print('a는 False임')
+
+if a == False:
+    print('a는 False임')
