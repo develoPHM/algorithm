@@ -4,11 +4,11 @@ sys.setrecursionlimit(10**6)
 
 def dfs(r):
     global count
-    visited[r] = cnt
+    visited[r] = count
     li[r].sort()
     for i in li[r]:
         if visited[i] == 0:
-            cnt += 1
+            count += 1
             dfs(i)
 
 
