@@ -3,17 +3,15 @@ import sys
 input = sys.stdin.readline
 
 def bfs(num):
-    global cnt
     q = deque()
     q.append(num)
+    v[num] = 1
     while q:
         check = q.popleft()
-        if v[check] == 1:
-            continue
-        v[check] = 1
         for c in graph[check]:
             if v[c] == 0:
                 q.append(c)
+                v[c] = 1
 
 N, M = map(int, input().split())
 graph = [[] for _ in range(N + 1)]
