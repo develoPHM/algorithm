@@ -1,14 +1,15 @@
-n, m = 8, 4
-section = [2, 3, 6]
+n, m = 4, 4
+section = [1,2,3,4]
 cnt = 0
 wall = [0] * (n + 1)
 for c in section:
     wall[c] = 1
-# for i in range(n + 1):
-#     if wall[i] and i + m - 1 <= n:
-#         wall[i:i + m] = False
-#         cnt += 1
-#     elif wall[i] and i + m -1 > n:
-#         cnt += 1
-#         continue
+for i in range(1, n + 1):
+    if wall[i] == 1 and i + m - 1 <= n:
+        cnt += 1
+        for j in range(i, i + m):
+            wall[j] = 0
+    elif wall[i] == 1 and i + m - 1 >= n:
+        cnt += 1
+
 print(cnt)
