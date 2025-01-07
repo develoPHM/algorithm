@@ -1,22 +1,25 @@
-s = "  for the what  1what  "
-s = s.lower()
-a = s.split()
-arr = []
-for c in a:
-    n = ''
-    n += c[0].upper()
-    n += c[1:]
-    arr.append(n)
-front_cnt = 0
-back_cnt = 0
-for c in s:
-    if c ==' ':
-        front_cnt += 1
-    else:
-        break
-for i in range(len(s)):
-    if s[len(s) - i - 1] == ' ':
-        back_cnt += 1
-    else:
-        break
-return front_cnt * ' ' + ' '.join(arr) + back_cnt * ' '
+def solution(s):
+    s = s.lower()
+
+    cnt = 0
+    ans = ''
+    for i in range(len(s)):
+        if s[i] == ' ':
+            cnt += 1
+            continue
+        if s[i] != ' ':
+            ans += cnt * ' '
+            cnt = 0
+            if len(ans) == 0 or ans[-1] == ' ':
+                ans += s[i].upper()
+            else:
+                ans += s[i]
+    back = 0
+    for i in range(len(s)):
+        if s[len(s) - i - 1] == ' ':
+            back += 1
+        else:
+            break
+
+    ans += back * ' '
+    return ans
