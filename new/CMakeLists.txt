@@ -15,4 +15,4 @@ execute_process(
 message(STATUS "Target file: ${TARGET_FILE}")
 
 add_executable(boj ${CMAKE_CURRENT_SOURCE_DIR}/${TARGET_FILE})
-add_executable(Out boj/2798.cpp)
+add_executable(Out boj/19532.cpp)
