@@ -1,23 +1,20 @@
-V = int(input())
-E = int(input())
+cnt = 0
+def dfs(start):
+    global cnt
+    visited[start] = 1
+    for c in graph[start]:
+        if visited[c] == 0:
+            cnt += 1
+            dfs(c)
 
-li = [[] for _ in range(V + 1)]
+v = int(input())
+m = int(input())
+graph = [[] for _ in range(v + 1)]
+for _ in range(m):
+    start, end = map(int,input().split())
+    graph[start].append(end)
+    graph[end].append(start)
+visited = [0] * (v + 1)
 
-for _ in range(E):
-    start, end = map(int, input().split())
-    li[start].append(end)
-    li[end].append(start)
-
-stack = [1]
-visited = []
-
-while stack:
-    current = stack.pop()
-    if current not in visited:
-        visited.append(current)
-
-    for destination in li[current]:
-        if destination not in visited:
-            stack.append(destination)
-
-print(len(visited) - 1)
+dfs(1)
+print(cnt)
