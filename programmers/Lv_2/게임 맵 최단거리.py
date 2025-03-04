@@ -28,4 +28,7 @@ def bfs(maps, x, y):
 
 def solution(maps):
     ans = bfs(maps, 0, 0)
-    return ans if ans != 1 else -1
+    if ans == 1:
+        return -1
+    else:
+        return ans
