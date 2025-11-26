@@ -1,5 +1,6 @@
 def solution(s):
     arr = []
+
     for c in s:
         if len(arr) == 0:
             arr.append(c)
@@ -12,3 +13,6 @@ def solution(s):
         return True
     else:
         return False
+
+
+print(solution('()()'))

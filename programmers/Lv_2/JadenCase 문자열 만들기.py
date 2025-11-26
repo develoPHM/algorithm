@@ -1,25 +1,21 @@
 def solution(s):
     s = s.lower()
+    result = ""
+    first = True
 
-    cnt = 0
-    ans = ''
-    for i in range(len(s)):
-        if s[i] == ' ':
-            cnt += 1
-            continue
-        if s[i] != ' ':
-            ans += cnt * ' '
-            cnt = 0
-            if len(ans) == 0 or ans[-1] == ' ':
-                ans += s[i].upper()
+    for c in s:
+        if first:
+            if c.isalpha():
+                result += c.upper()
             else:
-                ans += s[i]
-    back = 0
-    for i in range(len(s)):
-        if s[len(s) - i - 1] == ' ':
-            back += 1
+                result += c
         else:
-            break
+            result += c
 
-    ans += back * ' '
-    return ans
+        # 공백이면 다음 글자는 단어 첫 글자
+        if c == ' ':
+            first = True
+        else:
+            first = False
+
+    return result

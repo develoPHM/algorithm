@@ -1,7 +1,9 @@
-def solution(a,b):
+def solution(a, b):
     a.sort()
     b.sort(reverse=True)
-    s = 0
+    res = 0
     for i in range(len(a)):
-        s += a[i] * b[i]
-    return s
+        res += a[i] * b[i]
+    return res
+
+print(solution([1,4,2], [5,4,4]))
