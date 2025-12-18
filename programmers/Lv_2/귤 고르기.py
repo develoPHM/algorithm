@@ -13,3 +13,22 @@ def solution(k, tangerine):
         k -= dic[c]
         ans += 1
     return ans
+
+
+k = 2
+ans = 0
+tan = [1, 1, 1, 1, 2, 2, 2, 3]
+
+table = {}
+
+for x in tan:  # O(n)
+    table[x] = table.get(x, 0) + 1
+
+arr = sorted(table.values(), reverse=True)
+print(arr)
+
+for c in arr:
+    k -= c
+    ans += 1
+    if k <= 0:
+        break
