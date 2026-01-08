@@ -16,3 +16,13 @@ def solution(n,a,b):
         cnt += 1
         li = match
     return cnt
+
+# --------------- #
+def solution(n, A, B):
+    cnt = 0
+    while A != B:
+        # 다음 라운드 번호는 (현재번호 + 1) // 2
+        A = (A + 1) // 2
+        B = (B + 1) // 2
+        cnt += 1
+    return cnt
